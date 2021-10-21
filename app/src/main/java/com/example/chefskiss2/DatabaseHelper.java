@@ -66,7 +66,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long delete = db.delete(USER_TABLE, COLUMN_USERNAME +" = " + account.getUsername(), null);
         db.close();
 
-        return deleteAccount;
+        return deleteaccount;
 
     }
 

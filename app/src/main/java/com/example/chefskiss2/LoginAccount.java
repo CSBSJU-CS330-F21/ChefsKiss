@@ -45,7 +45,7 @@ public class LoginAccount extends AppCompatActivity {
                     }
 
                 } catch (Exception e) {
-                    errorMessage.setText("*Invalid Username");
+                    errorMessage.setText("*Invalid Username or Password");
                 }
             }
         });
