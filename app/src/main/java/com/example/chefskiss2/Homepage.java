@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ import org.naishadhparmar.zcustomcalendar.Property;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Homepage extends AppCompatActivity implements OnNavigationButtonClickedListener {
@@ -44,7 +46,7 @@ public class Homepage extends AppCompatActivity implements OnNavigationButtonCli
     private int tempClickPosition = 0;
     private Account loggedInAcct;
     private int someSelected = 0;
-
+    ArrayAdapter<String> arrayAdapt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +114,9 @@ public class Homepage extends AppCompatActivity implements OnNavigationButtonCli
                 return true;
             }
         });
+
+        ListView listView = findViewById(R.id.recipeList);
+        List<String> mylist = new ArrayList<>();
 
 
         //Meal Calendar
